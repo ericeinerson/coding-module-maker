@@ -2,8 +2,12 @@
 
 one:
   user: one
-  material: one
+  language: one
+  description: MyString
+  level: 1
 
 two:
   user: two
-  material: two
+  language: two
+  description: MyString
+  level: 1

@@ -10,29 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_06_215109) do
-  create_table "lessons", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "material_id", null: false
+ActiveRecord::Schema[7.0].define(version: 2022_04_11_210333) do
+  create_table "languages", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["material_id"], name: "index_lessons_on_material_id"
-    t.index ["user_id"], name: "index_lessons_on_user_id"
   end
 
-  create_table "materials", force: :cascade do |t|
+  create_table "lessons", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "language_id", null: false
     t.string "description"
+    t.integer "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["language_id"], name: "index_lessons_on_language_id"
+    t.index ["user_id"], name: "index_lessons_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "lessons", "materials"
+  add_foreign_key "lessons", "languages"
   add_foreign_key "lessons", "users"
 end

@@ -204,7 +204,7 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
-  bcrypt (~> 3.1.7)
+  bcrypt (~> 3.1.16)
   bootsnap
   capybara
   debug

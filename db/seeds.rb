@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Lesson.destroy_all
 User.destroy_all
-Material.destroy_all
+Language.destroy_all
 
 puts "seeding..."
 
@@ -16,13 +16,29 @@ User.create(
     password: "code1"
 )
 
-Material.create(
-    description: "Ruby is an object-oriented language"
+User.create(
+    username: "samiam",
+    password: "musicisgr8"
 )
 
-
-20.times do Lesson.create(
-    user: User.all.sample,
-    material: Material.all.sample
+Language.create(
+    name: "Ruby"
 )
-end
+
+Language.create(
+    name: "JavaScript"
+)
+
+Lesson.create(
+    user: User.second,
+    language: Language.first,
+    description: "Ruby is an object-oriented language. Object-oriented. According to the dicionary, this means Ruby uses a methodology which enables a system to be modeled as a set of objects which can be controlled and manipulated in a modular manner",
+    level: 1
+)
+Lesson.create(
+    user: User.first,
+    language: Language.second,
+    description: "JavaScript is unique because it is dynamic and interactive, allowing one to create useful web applications easily",
+    level: 1
+)
+
