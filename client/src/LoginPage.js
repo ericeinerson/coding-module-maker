@@ -43,6 +43,7 @@ function LoginPage({setUser}){
                 onChange = { (e) => setUsername(e.target.value)}
                 />
                 <input 
+                type = "password"
                 placeholder="password"
                 className = "password-input"
                 required = {true}
