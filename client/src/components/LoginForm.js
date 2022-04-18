@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import { Link, useNavigate } from "react-router-dom"
 
-function LoginPage({setUser}){
+function LoginForm({setUser}){
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -57,4 +57,4 @@ function LoginPage({setUser}){
         </div>
     )
 }
-export default LoginPage
+export default LoginForm

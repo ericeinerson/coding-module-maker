@@ -30,12 +30,14 @@ Language.create(
 )
 
 Lesson.create(
+    id: 1,
     user: User.second,
     language: Language.first,
-    description: "Ruby is an object-oriented language. Object-oriented. According to the dicionary, this means Ruby uses a methodology which enables a system to be modeled as a set of objects which can be controlled and manipulated in a modular manner",
+    description: "Ruby is an object-oriented language. According to the dicionary, this means Ruby uses a methodology which enables a system to be modeled as a set of objects which can be controlled and manipulated in a modular manner",
     level: 1
 )
 Lesson.create(
+    id: 2,
     user: User.first,
     language: Language.second,
     description: "JavaScript is unique because it is dynamic and interactive, allowing one to create useful web applications easily",

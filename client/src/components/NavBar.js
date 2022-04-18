@@ -9,13 +9,11 @@ function NavBar({ setUser }){
       }
 
     return(
-        <nav>
+        <nav id="navbar">
             <Link to = "/">Home</Link>
             <Link to = "/modules">Modules</Link>
             <Link to = "/loginpage">Login</Link>
-            <Link to = "/loginpage" onClick={handleLogout}>Logout
-                
-            </Link>
+            <Link to = "/loginpage" onClick={handleLogout}>Logout</Link>
         </nav>
     );
 }

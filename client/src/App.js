@@ -1,12 +1,13 @@
 import React,{ useState,useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import './App.css';
-import NavBar from "./NavBar";
-import Home from "./Home";
-import Login from "./Login"
-import Modules from "./Modules";
-import LoginPage from "./LoginPage"
-import SignUpPage from "./SignUpPage"
+import NavBar from "./components/NavBar";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Login from "./pages/Login"
+import Modules from "./pages/Modules";
+import LoginForm from "./components/LoginForm"
+import SignUpPage from "./components/SignUpForm"
 
 function App() {
 
@@ -33,14 +34,14 @@ function App() {
     })
   },[])
 
-  useEffect(()=>{
-    fetch("/languages")
-    .then(r=> {
-      if(r.ok){
-        r.json().then(languages=>setLanguages(languages))
-      }
-    })
-  },[])
+  // useEffect(()=>{
+  //   fetch("/languages")
+  //   .then(r=> {
+  //     if(r.ok){
+  //       r.json().then(languages=>setLanguages(languages))
+  //     }
+  //   })
+  // },[])
 
   if (!user) return <Login setUser={setUser} />;
 
@@ -63,6 +64,10 @@ function App() {
       </Route>
       <Route path = "/signup"
         element = {<SignUpPage />}
+      >
+      </Route>
+      <Route path = "/about"
+        element = {<About />}
       >
       </Route>
     </Routes>

@@ -1,0 +1,26 @@
+.module-card {
+    display: flex;
+    flex-flow: column;
+    width: 30vw;
+    height: 60vh;
+    text-align: left;
+    border-style: solid;
+    border-color: black;
+}
+
+
+.lesson-language{
+    height: 5vh;
+}
+
+.lesson-difficulty{
+    height: 5vh;
+}
+
+.lesson-description{
+    height: 20vh;
+}
+
+h2 {
+    padding-left: 50px;
+}

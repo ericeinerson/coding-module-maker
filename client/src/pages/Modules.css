@@ -1,0 +1,6 @@
+#modules-page {
+    display: flex;
+    flex-flow: row wrap;
+    overflow: scroll;
+    gap: 10px;
+}

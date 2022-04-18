@@ -2,8 +2,6 @@ body {
   background-color: aqua;
 }
 
-#home,
-#modules,
 #login {
   display: flex;
   align-items: center;
@@ -13,26 +11,26 @@ body {
   padding: 1rem;
 }
 
-nav {
+#navbar {
   display: flex;
   flex-flow: row wrap;
   background-color: rgb(201, 199, 99);
 }
 
-nav a {
+#navbar a {
   display: inline-block;
   margin: 1rem 2rem;
   text-decoration: none;
-  font-size: 2.2em;
+  font-size: 2.0em;
   border-radius: 1px;
   border-color: black;
-  color: rgb(48, 34, 178);
+  color: rgb(34, 36, 178);
   transition: 0.1s;
 }
 
-.module-1{
+/* .module-1{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   float: none;
   width: 20%;
@@ -45,7 +43,7 @@ nav a {
 
 .module-2{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   float: none;
   width: 20%;
@@ -55,4 +53,4 @@ nav a {
   margin-left: 20%;
   height: 200px
 }
-
+ */

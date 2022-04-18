@@ -1,0 +1,13 @@
+#home nav.home-link a {
+  display: flex;
+  flex-flow: row wrap;
+  width: 15vw;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  font-size: 2.0em;
+  background-color: rgb(252, 90, 90);
+  color: rgb(3, 19, 243);
+  text-decoration: none;
+}
