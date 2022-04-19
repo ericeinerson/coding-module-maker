@@ -15,6 +15,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   background-color: rgb(201, 199, 99);
+  justify-content: center;
 }
 
 #navbar a {

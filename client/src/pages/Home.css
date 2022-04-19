@@ -1,13 +1,30 @@
-#home nav.home-link a {
+#home, nav {
   display: flex;
-  flex-flow: row wrap;
-  width: 15vw;
+  flex-flow: column wrap;
   justify-content: center;
-  text-align: center;
-  margin: 5px;
+  align-items: center;
+  margin: 10px;
+  width: 100vw;
   padding: 5px;
-  font-size: 2.0em;
+  font-size: 1.5em;
   background-color: rgb(252, 90, 90);
   color: rgb(3, 19, 243);
   text-decoration: none;
+}
+
+#home {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75em;
+  background-color: rgb(252, 90, 90);
+  color: rgb(3, 19, 243);
+  text-decoration: none;
+}
+
+#home h1{
+  gap: 30px;
 }

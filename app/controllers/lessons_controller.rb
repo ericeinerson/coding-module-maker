@@ -8,7 +8,12 @@ class LessonsController < ApplicationController
     end
     
     def create 
-        lesson = Lesson.create!(level: params[:level], description: params[:description], language: Language.find_by(name: params[:language]), user_id: session[:user_id])
+        lesson = Lesson.create!(
+            level: params[:level], 
+            description: params[:description], 
+            language: Language.find_by(name: params[:language]), 
+            user_id: session[:user_id])
+
         render json: lesson, include: :language
     end
 
