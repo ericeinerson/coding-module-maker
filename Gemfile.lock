@@ -212,7 +212,7 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
-  active_model_serializers
+  active_model_serializers (~> 0.10.0)
   bcrypt (~> 3.1.16)
   bootsnap
   capybara

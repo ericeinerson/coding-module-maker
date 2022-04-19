@@ -1,10 +1,8 @@
 class LessonsController < ApplicationController
 
-    wrap_parameters format: []
-
     def index 
         lessons = Lesson.all
-        render json: lessons, include: :language
+        render json: lessons
     end
     
     def create 
@@ -14,7 +12,7 @@ class LessonsController < ApplicationController
             language: Language.find_by(name: params[:language]), 
             user_id: session[:user_id])
 
-        render json: lesson, include: :language
+        render json: lesson
     end
 
     def destroy 

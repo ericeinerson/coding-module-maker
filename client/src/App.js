@@ -40,7 +40,7 @@ function App() {
     <Routes>
       <Route 
       exact path = "/"
-        element = {<Home />}
+        element = {<Home user={user}/>}
         >
       </Route>
       <Route path = "/modules"
