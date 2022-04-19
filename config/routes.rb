@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :lessons, only:[:index]
+  resources :lessons, only:[:index, :create, :destroy]
   resources :users, only:[:show, :create]
   resources :languages, only:[:index]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -1,4 +1,4 @@
-import React,{ useState,useEffect } from "react";
+import React,{ useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import './App.css';
 import NavBar from "./components/NavBar";
@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Login from "./pages/Login"
 import Modules from "./pages/Modules";
-import LoginForm from "./components/LoginForm"
 import SignUpPage from "./components/SignUpForm"
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
   const [user, setUser] = useState(null);
   const [lessons, setLessons] = useState([]);
   const [languages, setLanguages] = useState([]);
-
 
   useEffect(()=>{
     fetch("/auth")
@@ -34,15 +32,6 @@ function App() {
     })
   },[])
 
-  // useEffect(()=>{
-  //   fetch("/languages")
-  //   .then(r=> {
-  //     if(r.ok){
-  //       r.json().then(languages=>setLanguages(languages))
-  //     }
-  //   })
-  // },[])
-
   if (!user) return <Login setUser={setUser} />;
 
   return (
@@ -55,7 +44,7 @@ function App() {
         >
       </Route>
       <Route path = "/modules"
-        element = {<Modules lessons={lessons} languages={languages}/>}
+        element = {<Modules  setLessons={setLessons} lessons={lessons} languages={languages}/>}
       >
       </Route>
       <Route path = "/loginpage"

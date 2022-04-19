@@ -2,7 +2,7 @@ import React from "react"
 import "./ModuleCard.css"
 
 function ModuleCard({ lesson }){
-    console.log(lesson.language)
+    
     return(
         <div>
             <h2>Module {lesson.id}</h2>

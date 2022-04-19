@@ -1,11 +1,10 @@
-import React, {useState} from "react"
-import {Link, useNavigate } from "react-router-dom"
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
-function SignUpPage({ setUser }) {
+function SignUpForm({ setUser }) {
     
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
 
     const navigate = useNavigate();
 
@@ -57,4 +56,4 @@ function SignUpPage({ setUser }) {
         </div>
     )
 }
-export default SignUpPage
+export default SignUpForm

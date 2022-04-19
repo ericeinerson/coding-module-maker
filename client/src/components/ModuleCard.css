@@ -1,6 +1,6 @@
 .module-card {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     width: 30vw;
     height: 60vh;
     text-align: left;

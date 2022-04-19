@@ -22,11 +22,11 @@ User.create(
 )
 
 Language.create(
-    name: "Ruby"
+    name: "ruby"
 )
 
 Language.create(
-    name: "JavaScript"
+    name: "javascript"
 )
 
 Lesson.create(
