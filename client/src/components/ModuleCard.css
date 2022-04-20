@@ -1,13 +1,14 @@
 .module-card {
     display: flex;
     flex-direction: column;
-    width: 30vw;
-    height: 60vh;
+    row-gap: 5%;
+    width: 25vw;
+    height: 50vh;
     text-align: left;
     border-style: solid;
     border-color: black;
+    font-size: x-large;
 }
-
 
 .lesson-language{
     height: 5vh;

@@ -1,8 +1,15 @@
 .about {
+    margin-right: 30px;
+    margin-left: 50px;
     display: flex;
     flex-direction: column;
     text-align: left;
     justify-content: center;
+    overflow: scroll;
+}
+
+.about ol {
+    font-size: xx-large;
 }
 
 

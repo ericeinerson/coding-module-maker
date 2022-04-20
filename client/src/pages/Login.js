@@ -8,6 +8,7 @@ function Login({ setUser }){
 
     return(
         <div id="login">
+        <h1>Welcome to Eduhub!</h1>
             {userExists ? (
                 <>
                 <LoginForm setUser={setUser} />

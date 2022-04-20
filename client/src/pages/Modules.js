@@ -48,7 +48,7 @@ function Modules(){
     return(
         <div>
             <div id="create-module">
-                <form onSubmit={handleDelete}>
+                <form id="delete-lesson" onSubmit={handleDelete}>
                     <select id="delete-lesson" onChange={(e)=> setDeleteLesson(e.target.value)}>
                         <option value="Select">Select</option>
                         {lessons.map(lesson => 
@@ -61,7 +61,7 @@ function Modules(){
                     <h2>Create your own module!</h2>
                     <input 
                         placeholder="language"
-                        className = "input-language"
+                        className = "input"
                         required = {true}
                         id = "module-input-language"
                         autoComplete = "off"
@@ -70,7 +70,7 @@ function Modules(){
                         /><br></br>
                         <input 
                         placeholder="level"
-                        className = "input-level"
+                        className = "input"
                         required = {true}
                         id = "module-input-level"
                         autoComplete = "off"
@@ -79,7 +79,7 @@ function Modules(){
                         /><br></br>
                         <input 
                         placeholder="description"
-                        className = "input-description"
+                        className = "input"
                         required = {true}
                         id = "module-input-description"
                         autoComplete = "off"
