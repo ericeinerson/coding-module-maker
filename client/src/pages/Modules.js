@@ -1,20 +1,30 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import ModuleCard from "../components/ModuleCard"
 import "./Modules.css"
 
-function Modules({ lessons, setLessons }){
+function Modules(){
 
     const [language, setLanguage] = useState("")
     const [level, setLevel] = useState("")
     const [description, setDescription] = useState("")
     const [deleteLesson, setDeleteLesson] = useState(null)
+    const [lessons, setLessons] = useState([]);
+
+    useEffect(()=>{
+        fetch("/lessons")
+        .then(r=> {
+          if(r.ok){
+            r.json().then(lessons=>setLessons(lessons))
+          }
+        })
+      },[])
 
     function handleDelete(e) {
         e.preventDefault()
         fetch(`/lessons/${deleteLesson}`, {
             method: "DELETE",
         })
-        .then(() => setLessons(lessons.filter((lesson)=> lesson.id !== deleteLesson)))
+        .then(() => setLessons((lessons)=> lessons.filter((lesson)=> lesson.id !== parseInt(deleteLesson))))
     }
 
     function handleCreateModule(e){
@@ -31,6 +41,8 @@ function Modules({ lessons, setLessons }){
             },
             body: JSON.stringify(lesson)
         })   
+        .then((r)=> r.json())
+        .then((lesson)=>setLessons([...lessons, lesson]))
     }
 
     return(

@@ -11,23 +11,12 @@ import SignUpPage from "./components/SignUpForm"
 function App() {
 
   const [user, setUser] = useState(null);
-  const [lessons, setLessons] = useState([]);
-  const [languages, setLanguages] = useState([]);
 
   useEffect(()=>{
     fetch("/auth")
     .then(r=> {
       if(r.ok){
         r.json().then(user=>setUser(user))
-      }
-    })
-  },[])
-
-  useEffect(()=>{
-    fetch("/lessons")
-    .then(r=> {
-      if(r.ok){
-        r.json().then(lessons=>setLessons(lessons))
       }
     })
   },[])
@@ -44,7 +33,7 @@ function App() {
         >
       </Route>
       <Route path = "/modules"
-        element = {<Modules  setLessons={setLessons} lessons={lessons} languages={languages}/>}
+        element = {<Modules />}
       >
       </Route>
       <Route path = "/loginpage"
