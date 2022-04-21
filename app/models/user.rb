@@ -4,7 +4,4 @@ class User < ApplicationRecord
     has_many :languages, through: :lessons 
 
     validates :password, length: {minimum: 5}
-
-    
-
 end
