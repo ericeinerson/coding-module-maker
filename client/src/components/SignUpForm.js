@@ -44,6 +44,7 @@ function SignUpForm({ setUser }) {
                 />
                 <input 
                 placeholder="password"
+                type="password"
                 className = "password-input"
                 required = {true}
                 id = "password"
