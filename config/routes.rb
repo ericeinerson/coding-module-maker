@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :terms, only: [:index]
   resources :lessons, only:[:index, :create, :destroy]
   resources :users, only:[:show, :create]
   resources :languages, only:[:index]

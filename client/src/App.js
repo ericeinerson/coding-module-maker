@@ -6,7 +6,8 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Login from "./pages/Login"
 import Modules from "./pages/Modules";
-import SignUpPage from "./components/SignUpForm"
+import SignUpPage from "./components/SignUpForm";
+import TermBank from "./pages/TermBank"
 
 function App() {
 
@@ -46,6 +47,10 @@ function App() {
       </Route>
       <Route path = "/about"
         element = {<About />}
+      >
+      </Route>
+      <Route path = "/termbank"
+        element = {<TermBank />}
       >
       </Route>
     </Routes>

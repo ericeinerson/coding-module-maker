@@ -32,7 +32,7 @@ function Modules(){
         const lesson = {
             language,
             level,
-            description
+            description,
         }
         fetch("/lessons", {
             method: "POST",

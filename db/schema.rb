@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_11_210333) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_22_191548) do
   create_table "languages", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -28,6 +28,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_11_210333) do
     t.index ["user_id"], name: "index_lessons_on_user_id"
   end
 
+  create_table "terms", force: :cascade do |t|
+    t.string "name"
+    t.integer "language_id", null: false
+    t.string "definition"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["language_id"], name: "index_terms_on_language_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
@@ -37,4 +46,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_11_210333) do
 
   add_foreign_key "lessons", "languages"
   add_foreign_key "lessons", "users"
+  add_foreign_key "terms", "languages"
 end
