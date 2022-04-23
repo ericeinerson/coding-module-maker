@@ -30,6 +30,10 @@ Language.create(
     name: "javascript"
 )
 
+Language.create(
+    name: "multiple/other"
+)
+
 Term.create(
     name: "function",
     language: Language.find_by(name: "javascript"),

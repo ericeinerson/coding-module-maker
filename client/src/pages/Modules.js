@@ -29,11 +29,30 @@ function Modules(){
 
     function handleCreateModule(e){
         e.preventDefault()
+
+        const languageExists = lessons.find(lesson=>lesson.language.name===language) 
+
         const lesson = {
             language,
             level,
             description,
         }
+
+        if (!languageExists){
+
+            const newLanguage = {
+                language
+            }
+
+            fetch("/languages", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newLanguage)
+            })   
+        }
+
         fetch("/lessons", {
             method: "POST",
             headers: {

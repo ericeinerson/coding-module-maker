@@ -11,7 +11,7 @@ class LessonsController < ApplicationController
             description: params[:description], 
             language: Language.find_by(name: params[:language]), 
             user_id: session[:user_id])
-
+            
         render json: lesson
     end
 
