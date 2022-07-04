@@ -8,7 +8,9 @@ function Modules(){
     const [level, setLevel] = useState("")
     const [description, setDescription] = useState("")
     const [deleteLesson, setDeleteLesson] = useState(null)
-    const [lessons, setLessons] = useState([]);
+    const [lesson, setLesson] = useState("")
+    const [lessons, setLessons] = useState([])
+    const [languageArry, setLanguageArry] = useState([])
 
     useEffect(()=>{
         fetch("/lessons")
@@ -18,6 +20,20 @@ function Modules(){
           }
         })
       },[])
+
+      useEffect(()=>{
+        fetch("/languages")
+        .then(r=> {
+          if(r.ok){
+            r.json().then(languageData=>setLanguageArry(languageData))
+          }
+        })
+      },[])
+
+    function handleSearch(e) {
+        e.preventDefault()
+        setLessons( ()=> lessons.filter((l)=> (l.language.name.includes(lesson)) || (l.level === parseInt(lesson)) || (l.description.includes(lesson))))
+    }
 
     function handleDelete(e) {
         e.preventDefault()
@@ -30,7 +46,9 @@ function Modules(){
     function handleCreateModule(e){
         e.preventDefault()
 
-        const languageExists = lessons.find(lesson=>lesson.language.name===language) 
+        console.log(languageArry)
+
+        const languageExists = languageArry.find(l=>l.name===language) 
 
         const lesson = {
             language,
@@ -51,6 +69,8 @@ function Modules(){
                 },
                 body: JSON.stringify(newLanguage)
             })   
+            .then(r => r.json)
+            .then(languageData=>setLanguageArry([...languageArry, languageData]))
         }
 
         fetch("/lessons", {
@@ -107,6 +127,17 @@ function Modules(){
                         /><br></br>
                         <input value="create" type="submit"/>
                 </form>
+                <form id="search-modules" onSubmit={handleSearch}>
+                    <input 
+                    id="search" 
+                    placeholder="search" 
+                    type="text" 
+                    value={lesson}
+                    onChange={ (e) => setLesson(e.target.value)}
+                    />
+                    <button type="submit">Search Modules</button>
+                </form>
+                <button type="submit">Show All Modules</button>
             </div>
             <div id="modules-page">
                 {lessons.map(lesson => (<ModuleCard key={lesson.id} lesson={lesson} />))}

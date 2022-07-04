@@ -12,6 +12,4 @@ Rails.application.routes.draw do
   get "/auth", to: "users#show"
   delete "/logout", to: "session#destroy"
 
-  # post "/signup", to: "users#create"
-
 end

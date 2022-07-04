@@ -14,12 +14,11 @@ function TermBank() {
           }
         })
       },[])
-      console.log(languages)
 
     return (
         <div>
             {languages.map(language=> 
-                <div key={language.id}>
+                <div key={language.id} className="language__header">
                     <h2>Language: {language.name}</h2>
                     {(language.terms.length>0) ? 
                         (

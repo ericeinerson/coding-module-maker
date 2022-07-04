@@ -1,5 +1,20 @@
+:root {
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+
+  --transition: 400ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
 body {
-  background-color: aqua;
+  background-color: var(--color-bg);
 }
 
 #login {
@@ -9,12 +24,14 @@ body {
   flex-direction: column;
   text-align: center;
   padding: 1rem;
+  color: white;
+  background: var(--color-bg-variant)
 }
 
 #navbar {
   display: flex;
   flex-flow: row wrap;
-  background-color: rgb(201, 199, 99);
+  background: rgba(0, 0, 0, 0.3);
   justify-content: center;
 }
 
@@ -25,7 +42,7 @@ body {
   font-size: 2.0em;
   border-radius: 1px;
   border-color: black;
-  color: rgb(34, 36, 178);
+  color: white;  
   transition: 0.1s;
 }
 

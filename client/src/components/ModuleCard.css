@@ -6,8 +6,9 @@
     height: 50vh;
     text-align: left;
     border-style: solid;
-    border-color: black;
+    border-color: white;
     font-size: x-large;
+    background: var(--color-bg-variant);
 }
 
 .lesson-language{

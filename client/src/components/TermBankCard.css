@@ -1,4 +1,6 @@
 #term-bank-card {
     display: flex;
     font-size: large;
+    background: var(--color-bg-variant);
+    color: white;
 }

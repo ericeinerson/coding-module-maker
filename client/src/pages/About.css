@@ -6,6 +6,7 @@
     text-align: left;
     justify-content: center;
     overflow: scroll;
+    color: white;
 }
 
 .about ol {

@@ -5,16 +5,19 @@
   width: 100vw;
   padding: 5px;
   font-size: 1.5em;
-  background-color: rgb(252, 90, 90);
-  color: rgb(3, 19, 243);
+  background-color: var(--color-bg-variant);
+  color: white;
 }
 
+#home a {
+  color: white;
+}
 #home {
   display: flex;
   gap: 10px;
   margin: 20px;
   flex-flow: column wrap;
   font-size: 1.75em;
-  background-color: rgb(252, 90, 90);
-  color: rgb(3, 19, 243);
+  background-color: var(--color-bg-variant);
+  color: var(--color-light);
 }

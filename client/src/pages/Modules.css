@@ -3,11 +3,13 @@
     flex-flow: row wrap;
     overflow: scroll;
     column-gap: 40px;
+    color: white;
 }
 
 #create-module {
     display: flex;
     column-gap: 60px;
+    color: white;
 }
 
 #new-lesson {
@@ -15,12 +17,17 @@
     display: flex;
     align-items: center;
     border-style: solid;
-    border-color: black;
+    border-color: white;
     height: 20px;
+    background: var(--color-bg-variant);
 }
 
 #delete-lesson {
     display: flex;
     height: 20px;
     width: 150px;
+}
+
+#search {
+    height: 25px;
 }
