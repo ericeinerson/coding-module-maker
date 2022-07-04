@@ -3,4 +3,5 @@
     font-size: large;
     background: var(--color-bg-variant);
     color: white;
+    gap: 1px;
 }

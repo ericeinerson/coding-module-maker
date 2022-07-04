@@ -1,3 +1,7 @@
 .language__header {
     color: white;
+    background: var(--color-bg-variant);
+    padding: 2px;
+    gap: 2px;
 }
+
